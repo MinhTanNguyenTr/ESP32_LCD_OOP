@@ -1,18 +1,12 @@
 #include <Arduino.h>
-
+#include "SystemController.hpp"
 // put function declarations here:
-int myFunction(int, int);
-
+SystemController controller;
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  controller.begin();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  controller.loop();
 }

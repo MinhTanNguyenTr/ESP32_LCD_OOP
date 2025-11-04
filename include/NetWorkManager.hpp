@@ -1,8 +1,10 @@
 #pragma once
-#include <string>
+#include <Arduino.h>
 class NetWorkManager {
     public:
     void begin();
-    void connectWifi(const std::string& wifiID, const std::string& wifiPass);
+    bool connectWifi(const String& wifiID, const String& wifiPass);
     bool isConnect();
+    private: 
+    bool  connected = false;
 };
